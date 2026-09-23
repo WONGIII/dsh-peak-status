@@ -1,0 +1,6 @@
+# dsh-peak-status bundle patch: mounts the plugin into a profile layer stack.
+# The chat-header clock is rendered by the client half; the host half is a no-op.
+# A profile may still override this row in its own patch file with the same id.
+- insert:
+    - id: dsh-peak-status
+      name: '@dsh-external/dsh-peak-status'

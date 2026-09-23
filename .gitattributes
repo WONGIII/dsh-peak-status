@@ -1,0 +1,8 @@
+# Normalise to LF in the repository. The sources are plain text and lib/ is generated,
+# so nothing here wants platform line endings; without this, a Windows checkout rewrites
+# every file, `pnpm run check` reports stale artifacts, and the diff noise hides real changes.
+* text=auto eol=lf
+
+# Binary.
+*.png binary
+*.tgz binary
