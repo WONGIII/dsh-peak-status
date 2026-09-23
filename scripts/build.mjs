@@ -20,10 +20,15 @@
  *   node scripts/build.mjs           write lib/
  *   node scripts/build.mjs --check   report whether lib/ is up to date
  *
- * `pnpm add github:WONGIII/dsh-peak-status` runs this script through the
- * package's `prepare`, but that install has no devDependencies: when TypeScript
- * is unavailable and `lib/` already exists, the committed artifacts are left in
- * place instead of failing the install.
+ * This package deliberately declares NO `prepare` script. pnpm refuses to run
+ * build scripts of a git-hosted dependency until the user allowlists it, so a
+ * `prepare` would force every `dsh plugin add github:WONGIII/dsh-peak-status`
+ * through a build-permission prompt even though `lib/` is committed. Rebuild
+ * and commit `lib/` before tagging a release instead.
+ *
+ * TypeScript is a devDependency, so a git install (which fetches no
+ * devDependencies) cannot run this script at all — hence the guard in
+ * {@link loadTypeScript}.
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'

@@ -26,7 +26,7 @@ On a weekend the off-peak countdown targets **the next weekday's 09:00** (Saturd
 
 ## Install
 
-From GitHub (the repository ships prebuilt artifacts, so no build permission is needed):
+From GitHub (the repository ships the built `lib/` and deliberately declares **no `prepare` script**, so pnpm never asks you to allowlist a build):
 
 ```bash
 dsh plugin --profile web add github:WONGIII/dsh-peak-status

@@ -26,7 +26,7 @@ DeepSeek API 的优惠时段以**北京时间**（UTC+8）计算，本插件按�
 
 ## 安装
 
-从 GitHub 安装（仓库自带构建产物，无需授权构建脚本）：
+从 GitHub 安装（仓库自带已构建的 `lib/`，且刻意**不声明 `prepare` 脚本**，所以 pnpm 不会要求你放行构建授权）：
 
 ```bash
 dsh plugin --profile web add github:WONGIII/dsh-peak-status
