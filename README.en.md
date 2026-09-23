@@ -39,6 +39,8 @@ git clone https://github.com/WONGIII/dsh-peak-status.git
 dsh plugin --profile web add ./dsh-peak-status
 ```
 
+> Replace `web` with your own profile name (the desktop app uses `desktop`, or install the GitHub address straight from its **Plugins** page).
+
 **Restart DSH** afterwards (`dsh web` or the desktop app). The plugin row is a host-side Loader row and the browser half is served from it, so the profile has to recompose before the row exists; reloading the page alone is not enough.
 
 Once installed, the sidebar's **Plugins → Installed** group shows `@dsh-external/dsh-peak-status`; expanding it lets you switch the single `dsh-peak-status` row on or off. Switch it off and reload the page to remove the status row.

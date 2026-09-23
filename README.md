@@ -39,6 +39,8 @@ git clone https://github.com/WONGIII/dsh-peak-status.git
 dsh plugin --profile web add ./dsh-peak-status
 ```
 
+> 下文的 `web` 换成你自己的 profile 名即可（比如桌面端用 `desktop`，或直接在桌面端的 **Plugins** 页里填这个 GitHub 地址安装）。
+
 安装后**重启 DSH**（`dsh web` 或桌面端）。插件行是 host 侧的 Loader 行，浏览器半由它对外提供，所以要等 DSH 重新组合一次配置才生效；只刷新页面不够。
 
 装上以后可以在侧栏 **Plugins → Installed** 里看到 `@dsh-external/dsh-peak-status`，展开即可单独开关 `dsh-peak-status` 这一行。关掉开关并刷新页面，状态行消失。
